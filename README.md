@@ -63,7 +63,8 @@ Este es el backend del sistema web **Refugio Animal**, una plataforma destinada 
   PORT=3000
   MONGODB_URI=mongodb://localhost:27017/refugio-animal
   ```
-⚠️ Puedes usar MongoDB local o en la nube (MongoDB Atlas).
+  ⚠️ Puedes usar MongoDB local o en la nube (MongoDB Atlas).
+  
 4. Inicia el servidor:
   ```bash
   npm rund dev
@@ -99,25 +100,25 @@ Todos los endpoints están bajo el prefijo /api:
 ---
 
 ## 📚 Cómo funciona internamente
-###🔄 Conexión a MongoDB
-    La conexión se maneja desde config.js, leyendo la URI del archivo .env.
-    
-    ````js
-    const mongoose = require('mongoose');
-    mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
-    ````
+### 🔄 Conexión a MongoDB
+  La conexión se maneja desde config.js, leyendo la URI del archivo .env.
+  
+  ````js
+  const mongoose = require('mongoose');
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+  ````
 
 ### 🧠 Modelos (MongoDB)
-    Usamos Mongoose para definir los esquemas de datos, como:
-      -mascota.model.js: nombre, edad, imagen, historia, etc.
-      -adopcion.model.js: datos del adoptante y referencia a la mascota
-      -apadrinamiento.model.js: datos del padrino, monto y mascota relacionada
+  Usamos Mongoose para definir los esquemas de datos, como:
+    -mascota.model.js: nombre, edad, imagen, historia, etc.
+    -adopcion.model.js: datos del adoptante y referencia a la mascota
+    -apadrinamiento.model.js: datos del padrino, monto y mascota relacionada
 
 ### 🧩 Controladores
-    Cada controlador (.controller.js) contiene la lógica para manejar las solicitudes, como guardar datos, buscar por ID, manejar errores, etc.
+  Cada controlador (.controller.js) contiene la lógica para manejar las solicitudes, como guardar datos, buscar por ID, manejar errores, etc.
 
 ### 🌐 Rutas (REST API)
-    Las rutas (.routes.js) definen los endpoints y llaman a los controladores correspondientes.
+  Las rutas (.routes.js) definen los endpoints y llaman a los controladores correspondientes.
 ---
 
 ## 👨‍💻 Autor
