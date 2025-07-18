@@ -1,0 +1,39 @@
+###
+
+GET http://localhost:4000/api/mascotas
+
+###
+POST http://localhost:4000/api/mascotas
+Content-Type: application/json
+
+{
+  "imagenURL": "https://cdn.pixabay.com/photo/2016/03/27/22/16/dog-1284307_960_720.jpg",
+  "nombre": "Luna",
+  "edad": 3,
+  "genero": "Hembra",
+  "tamano": "Mediano",
+  "historia": "Fue rescatada de las calles de Lima, es muy cariñosa.",
+  "estadoAdopcion": "disponible",
+  "disponibleParaAdopcion": true,
+  "disponibleParaApadrinar": true
+}
+
+###
+
+GET http://localhost:4000/api/mascotas/68484e331cfeb7818f17c4b3
+
+###
+
+DELETE http://localhost:4000/api/mascotas/684f2d91d9c71dff61229476
+
+###
+
+PUT http://localhost:4000/api/mascotas/684f2ec0d9c71dff6122947d
+Content-Type: application/json
+
+{ 
+  "edad": -10,
+  "disponibleParaAdopcion": false,
+  "disponibleParaApadrinar": true,
+  "estadoAdopcion": "disponible"
+}
