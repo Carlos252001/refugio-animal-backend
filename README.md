@@ -119,6 +119,7 @@ Todos los endpoints están bajo el prefijo /api:
 
 ### 🌐 Rutas (REST API)
   Las rutas (.routes.js) definen los endpoints y llaman a los controladores correspondientes.
+  
 ---
 
 ## 👨‍💻 Autor
